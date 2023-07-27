@@ -7,5 +7,6 @@
         "quarto.quarto"
       ]
     }
-  }
+  },
+  "postCreateCommand": "RScript -e \"renv::restore()\""
 }
