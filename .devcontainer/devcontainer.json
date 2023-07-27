@@ -1,3 +1,11 @@
 {
-  "image": "ghcr.io/quarto-dev/quarto-full:1.4.266"
+  "name": "Quarto devcontainer",
+  "image": "ghcr.io/quarto-dev/quarto-full:1.4.266",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "quarto.quarto"
+      ]
+    }
+  }
 }
