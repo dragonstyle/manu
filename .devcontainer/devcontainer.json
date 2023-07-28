@@ -5,7 +5,8 @@
     "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
       "vscodeRSupport": false,
       "installRMarkdown": true,
-      "installJupyterlab": false
+      "installJupyterlab": false,
+      "installREnv": true
     },
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
       "version": "prerelease",
@@ -13,7 +14,7 @@
       "installChromium": false
     }
   },
-  "postCreateCommand": "RScript -e \"renv::restore()\"",
+  "postCreateCommand": "R -e \"renv::restore()\"",
   "postAttachCommand": "sudo rstudio-server start",
   "forwardPorts": [
     8787
