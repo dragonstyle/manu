@@ -1,13 +1,6 @@
 {
   "name": "Default Container",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "quarto.quarto"
-      ]
-    }
-  },
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
       "vscodeRSupport": false,
@@ -16,8 +9,20 @@
     },
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
       "version": "prerelease",
-      "installTinyTex": false,
+      "installTinyTex": true,
       "installChromium": false
+    }
+  },
+  "postCreateCommand": "RScript -e \"renv::restore()\"",
+  "postAttachCommand": "sudo rstudio-server start",
+  "forwardPorts": [
+    8787
+  ],
+  "portsAttributes": {
+    "8787": {
+      "label": "Rstudio",
+      "requireLocalPort": true,
+      "onAutoForward": "ignore"
     }
   }
 }
