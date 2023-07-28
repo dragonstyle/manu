@@ -1,6 +1,6 @@
 {
   "name": "Default Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "ghcr.io/rocker-org/rstudio:4.3.1",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
       "vscodeRSupport": false,
