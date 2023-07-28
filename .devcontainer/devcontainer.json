@@ -1,6 +1,6 @@
 {
-  "name": "Quarto devcontainer",
-  "image": "ghcr.io/quarto-dev/quarto-full:1.4.266",
+  "name": "Default Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -8,5 +8,16 @@
       ]
     }
   },
-  "postCreateCommand": "RScript -e \"renv::restore()\""
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+      "vscodeRSupport": false,
+      "installRMarkdown": true,
+      "installJupyterlab": false
+    },
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+      "version": "prerelease",
+      "installTinyTex": false,
+      "installChromium": false
+    }
+  }
 }
