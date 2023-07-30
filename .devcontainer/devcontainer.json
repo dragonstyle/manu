@@ -25,5 +25,10 @@
       "requireLocalPort": true,
       "onAutoForward": "ignore"
     }
+  },
+  "codespaces": {
+    "openFiles": [
+      "index.qmd"
+    ]
   }
 }
