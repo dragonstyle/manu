@@ -25,5 +25,8 @@
     "openFiles": [
       "index.qmd"
     ]
+  },
+  "containerEnv": {
+    "QUARTO_VERSION": "prerelease"
   }
 }
