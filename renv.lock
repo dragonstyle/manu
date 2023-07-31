@@ -897,6 +897,18 @@
       ],
       "Hash": "273a6bb4a9844c296a459d2176673270"
     },
+    "packrat": {
+      "Package": "packrat",
+      "Version": "0.9.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "tools",
+        "utils"
+      ],
+      "Hash": "481428983c19a7c443f7ea1beff0a2de"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
@@ -1061,13 +1073,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.0.9000",
+      "Version": "1.0.0",
       "Source": "Repository",
-      "Repository": "https://rstudio.r-universe.dev",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "aacc4aa9f20739ea7dc3e92f7bf240d7"
+      "Hash": "c321cd99d56443dbffd1c9e673c0c1a2"
     },
     "reprex": {
       "Package": "reprex",
@@ -1125,6 +1137,28 @@
         "yaml"
       ],
       "Hash": "79f14e53725f28900d936f692bfdd69f"
+    },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cli",
+        "curl",
+        "digest",
+        "jsonlite",
+        "lifecycle",
+        "openssl",
+        "packrat",
+        "renv",
+        "rlang",
+        "rstudioapi",
+        "tools",
+        "yaml"
+      ],
+      "Hash": "00bed55b8a510c8a6b5bfe331ff03032"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
