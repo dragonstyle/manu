@@ -65,6 +65,14 @@ Based on data up to and including 1971, eruptions on La Palma happen every `r ro
 
 Studies of the magma systems feeding the volcano, such as @marrero2019, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).
 
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
 Eight eruptions have been recorded since the late 1400s (@fig-timeline).
 
 Data and methods are discussed in @sec-data-methods.
