@@ -8,7 +8,11 @@ format:
   html:
     toc: true
     comments:
-      hypothesis: true
+      hypothesis: false
+    title-block-style: manuscript
+    theme:
+      light: flatly
+      dark: darkly
   docx: default
   jats: default
   agu-pdf: default
