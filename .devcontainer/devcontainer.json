@@ -16,6 +16,13 @@
   },
   "postCreateCommand": "Rscript -e \"renv::restore();\"",
   "postAttachCommand": "sudo rstudio-server start",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r"
+      ]
+    }
+  },
   "forwardPorts": [
     8787
   ],
