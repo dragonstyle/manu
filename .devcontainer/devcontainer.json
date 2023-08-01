@@ -14,7 +14,7 @@
       "installChromium": true
     }
   },
-  "postCreateCommand": "R -e \"renv::restore()\"",
+  "postCreateCommand": "Rscript -e \"renv::restore();\"",
   "postAttachCommand": "sudo rstudio-server start",
   "forwardPorts": [
     8787
