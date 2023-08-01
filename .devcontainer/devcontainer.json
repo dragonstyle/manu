@@ -14,7 +14,7 @@
       "installChromium": true
     }
   },
-  "postCreateCommand": "Rscript -e \"renv::restore();\"",
+  "postCreateCommand": "Rscript -e '.libPaths(c(\"/home/rstudio/R/x86_64-pc-linux-gnu-library/4.3\")); install.packages(\"renv\"); install.packages(\"languageserver\"); renv::restore();'",
   "postAttachCommand": "sudo rstudio-server start",
   "customizations": {
     "vscode": {
