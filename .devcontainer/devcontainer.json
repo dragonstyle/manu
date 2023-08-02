@@ -18,14 +18,13 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "REditorSupport.r",
         "sumneko.lua"
       ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "index.qmd"
+      ]
     }
-  },
-  "codespaces": {
-    "openFiles": [
-      "index.qmd"
-    ]
   }
 }
