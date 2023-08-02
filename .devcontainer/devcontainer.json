@@ -1,12 +1,12 @@
 {
   "name": "Default Container",
-  "image": "ghcr.io/rocker-org/rstudio:4.3.1",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-      "vscodeRSupport": false,
+      "vscodeRSupport": true,
       "installJupyterlab": false,
-      "installREnv": false,
-      "installRMarkdown": false
+      "installREnv": true,
+      "installRMarkdown": true
     },
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
       "version": "prerelease",
@@ -14,7 +14,7 @@
       "installChromium": true
     }
   },
-  "postCreateCommand": "Rscript -e 'install.packages(\"languageserver\");' -e '.libPaths(c(\"/home/rstudio/R/x86_64-pc-linux-gnu-library/4.3\")); install.packages(\"renv\"); renv::restore();'",
+  "postCreateCommand": "Rscript -e 'renv::restore();'",
   "postAttachCommand": "sudo rstudio-server start",
   "customizations": {
     "vscode": {
