@@ -2,4 +2,4 @@ curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.288/qua
 dpkg -x quarto-1.4.288-linux-amd64.deb quarto
 
 mkdir -p ./.local/bin
-ln -s ./quarto/opt/quarto/bin/quarto ./.local/bin/quarto
+ln -s ~/quarto/opt/quarto/bin/quarto ~/.local/bin/quarto
