@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-      "vscodeRSupport": true,
+      "vscodeRSupport": "full",
       "installJupyterlab": false,
       "installREnv": true,
       "installRMarkdown": true
@@ -14,7 +14,7 @@
       "installChromium": true
     }
   },
-  "postCreateCommand": "Rscript -e 'renv::restore();'",
+  "postCreateCommand": "Rscript install.R",
   "customizations": {
     "vscode": {
       "extensions": [
