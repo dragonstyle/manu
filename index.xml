@@ -34,6 +34,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <given-names>Steve</given-names>
 </name>
 <string-name>Steve Purves</string-name>
+
 <email>steve@curvenote.com</email>
 <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
 <role vocab="https://credit.niso.org" vocab-term="project
@@ -51,6 +52,7 @@ administration</role>
 <given-names>Rowan</given-names>
 </name>
 <string-name>Rowan Cockett</string-name>
+
 <xref ref-type="aff" rid="aff-1">a</xref>
 </contrib>
 </contrib-group>
@@ -70,10 +72,10 @@ administration</role>
 <corresp id="cor-1">steve@curvenote.com</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-08-10">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-08-14">
 <year>2023</year>
 <month>8</month>
-<day>10</day>
+<day>14</day>
 </pub-date>
 
 
@@ -256,6 +258,7 @@ Nacional (IGN). …</p>
 <given-names>Steve</given-names>
 </name>
 <string-name>Steve Purves</string-name>
+
 <email>steve@curvenote.com</email>
 <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
 <role vocab="https://credit.niso.org" vocab-term="project
@@ -273,6 +276,7 @@ administration</role>
 <given-names>Rowan</given-names>
 </name>
 <string-name>Rowan Cockett</string-name>
+
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
 </contrib>
 </contrib-group>
@@ -483,6 +487,7 @@ avg_years_between_eruptions</code>
 <given-names>Charlotte</given-names>
 </name>
 <string-name>Charlotte Wickham</string-name>
+
 </contrib>
 </contrib-group>
 </front-stub>
