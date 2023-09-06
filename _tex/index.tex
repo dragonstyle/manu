@@ -75,24 +75,28 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+% avoid brackets around text for \cite:
+\makeatletter
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
+\newlength{\cslentryspacing}
+\setlength{\cslentryspacing}{0em}
+\usepackage{enumitem}
+\newlist{CSLReferences}{itemize}{1}
+\setlist[CSLReferences]{label={},
+  leftmargin=\cslhangindent,
+  itemindent=-1\cslhangindent,
+  parsep=\parskip,
+  itemsep=\cslentryspacing}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
@@ -191,10 +195,9 @@ Earthquake data for the island of La Palma from the September 2021
 eruption is found \ldots{}
 
 
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}
 
-\hypertarget{cell-fig-timeline}{}
+\phantomsection\label{cell-fig-timeline}
 \begin{figure}[H]
 
 {\centering \includegraphics{index_files/figure-pdf/fig-timeline-1.pdf}
@@ -223,15 +226,15 @@ Data and methods are discussed in Section~\ref{sec-data-methods}.
 Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
 modeled by a Poisson distribution
 
-\begin{equation}\protect\hypertarget{eq-poisson}{}{
+\begin{equation}\phantomsection\label{eq-poisson}{
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-}\label{eq-poisson}\end{equation}
+}\end{equation}
 
 where \(\lambda\) is the rate of eruptions per year. Using
 Equation~\ref{eq-poisson}, the probability of an eruption in the next
 \(t\) years can be calculated.
 
-\hypertarget{tbl-history}{}
+\phantomsection\label{tbl-history}
 \begin{longtable}[]{@{}ll@{}}
 \caption{\label{tbl-history}Recent historic eruptions on La
 Palma}\tabularnewline
@@ -287,21 +290,19 @@ Earthquakes}}
 Figure~\ref{fig-spatial-plot} shows the location of recent Earthquakes
 on La Palma.
 
-\hypertarget{sec-data-methods}{%
-\section{Data \& Methods}\label{sec-data-methods}}
+\section{Data \& Methods}\label{sec-data-methods}
 
-\hypertarget{conclusion}{%
-\section{Conclusion}\label{conclusion}}
+\section{Conclusion}\label{conclusion}
 
-\hypertarget{references}{%
-\section*{References}\label{references}}
+\section*{References}\label{references}
 \addcontentsline{toc}{section}{References}
 
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
+\phantomsection\label{refs}
+\setlength{\cslentryspacing}{0em}
+\begin{CSLReferences}
 \vspace{1em}
 
-\leavevmode\vadjust pre{\hypertarget{ref-marrero2019}{}}%
+\bibitem[\citeproctext]{ref-marrero2019}
 Marrero, J., García, A., Berrocoso, M., Llinares, Á., Rodríguez-Losada,
 A., \& Ortiz, R. (2019). Strategies for the development of volcanic
 hazard maps in monogenetic volcanic fields: The example of {La} {Palma}
